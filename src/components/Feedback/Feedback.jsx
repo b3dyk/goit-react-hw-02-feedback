@@ -8,9 +8,11 @@ export class Feedback extends Component {
     good: 0,
     neutral: 0,
     bad: 0,
+    total: 0,
+    positivePercentage: 0,
   };
 
-  onLeaveFeedback = evt => {
+  handleFeedback = evt => {
     const key = evt.target.name;
     this.setState(prevState => ({
       [key]: prevState[key] + 1,
@@ -32,21 +34,28 @@ export class Feedback extends Component {
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
-
-    // const keys = Object.keys(this.state);
-    // const values = Object.values(this.state);
+    const { good, neutral, bad, total, positivePercentage } = this.state;
 
     return (
-      <Section title="Please leave your feedback">
-        <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+      <>
+        <Section title="Please leave your feedback">
+          <FeedbackOptions onLeaveFeedback={this.handleFeedback} />
+        </Section>
 
-        {good || neutral || bad ? (
-          <Statistics state={this.state} />
-        ) : (
-          <p>No feedback given</p>
-        )}
-      </Section>
+        <Section title="Statistics">
+          {good || neutral || bad ? (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positivePercentage}
+            />
+          ) : (
+            <p>No feedback given</p>
+          )}
+        </Section>
+      </>
     );
   }
 }
