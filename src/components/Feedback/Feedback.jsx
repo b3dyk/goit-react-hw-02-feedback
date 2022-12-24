@@ -5,9 +5,9 @@ import Section from './Section';
 
 export class Feedback extends Component {
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    good: this.props.good,
+    neutral: this.props.neutral,
+    bad: this.props.bad,
     total: 0,
     positivePercentage: 0,
   };
@@ -17,6 +17,7 @@ export class Feedback extends Component {
     this.setState(prevState => ({
       [key]: prevState[key] + 1,
     }));
+
     this.countTotalFeedback();
     this.countPositiveFeedbackPercentage();
   };
