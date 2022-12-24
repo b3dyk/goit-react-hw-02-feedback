@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 180px;
+}
+
+.text {
+  font-weight: 500;
+}
+
+.value {
+  font-weight: 400;
+}

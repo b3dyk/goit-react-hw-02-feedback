@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import css from './FeedbackOptions.module.css';
+
 const btnsMap = [
   { id: 'good', name: 'Good' },
   { id: 'neutral', name: 'Neutral' },
@@ -9,15 +11,21 @@ const btnsMap = [
 
 const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
-    <>
+    <div className={css.wrapper}>
       {btnsMap.map(({ id, name }) => {
         return (
-          <button key={id} type="button" name={id} onClick={onLeaveFeedback}>
+          <button
+            className={css.button}
+            key={id}
+            type="button"
+            name={id}
+            onClick={onLeaveFeedback}
+          >
             {name}
           </button>
         );
       })}
-    </>
+    </div>
   );
 };
 

@@ -51,17 +51,13 @@ export class Feedback extends Component {
         </Section>
 
         <Section title="Statistics">
-          {good || neutral || bad ? (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={total}
-              positivePercentage={positivePercentage}
-            />
-          ) : (
-            <p>No feedback given</p>
-          )}
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            positivePercentage={positivePercentage}
+          />
         </Section>
       </>
     );
