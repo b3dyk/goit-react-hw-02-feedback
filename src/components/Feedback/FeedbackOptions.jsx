@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const btnsMap = [
   { id: 'good', name: 'Good' },
@@ -21,3 +22,7 @@ const FeedbackOptions = ({ onLeaveFeedback }) => {
 };
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
