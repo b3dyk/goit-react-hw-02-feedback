@@ -6,15 +6,15 @@
 }
 
 .button {
-  font-family: inherit;
-  border: none;
-  min-width: 100px;
+  width: 100px;
   height: 30px;
+  background-color: #45b6fe;
+  border: none;
   border-radius: 4px;
-  background-color: #b2e4f0;
-  color: #122236;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 
   cursor: pointer;
