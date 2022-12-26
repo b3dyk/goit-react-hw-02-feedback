@@ -1,0 +1,9 @@
+.wrapper {
+  width: 300px;
+  height: 180px;
+  text-align: center;
+}
+
+.text {
+  font-weight: 500;
+}

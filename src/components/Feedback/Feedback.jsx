@@ -15,8 +15,6 @@ export class Feedback extends Component {
     good: this.props.good,
     neutral: this.props.neutral,
     bad: this.props.bad,
-    total: 0,
-    positivePercentage: 0,
   };
 
   handleFeedback = evt => {
